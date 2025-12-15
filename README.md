@@ -8,7 +8,7 @@
 [![Next.js%2016](https://img.shields.io/badge/Next.js-v16-black?style=flat)](https://nextjs.org/docs)
 [![Tailwind%20CSS](https://img.shields.io/badge/Tailwind%20v4-%20%20-06B6D4?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-<img src="public/screenshot.png" alt="Next.js 16 Starter"  style="display: block; margin: 0 auto; border-radius: 10px; max-width: 90%;" />
+<img src="public/screenshot.png" alt="Next.js 16 Starter"  style="display: block; margin: 0 auto; border-radius: 15px; max-width: 80%;" />
 <br/>
 
 Welcome! Ein UI is a collection of beautiful, ready-made "liquid glass" components that you can preview, copy, and use in your website or app. This guide explains how to preview the components, get code snippets, and add a component to your project — no developer knowledge required.
