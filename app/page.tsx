@@ -227,12 +227,12 @@ export default function HomePage() {
           {/* Announcement Banner for New Widgets */}
           <div className="flex justify-center mb-6">
             <GlassAnnouncement
-              href="/docs/components/command-palette"
+              href="/docs/components/widgets/calendar"
               label="New"
               variant="purple"
-              size="md"
+              size="lg"
             >
-              Introducing Innovative - Explore our new components like Command Palette,
+              Introducing Calendar Widget
             </GlassAnnouncement>
           </div>
           <div className="flex items-center justify-center gap-3 mb-6">

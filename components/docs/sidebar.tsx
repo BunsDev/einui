@@ -37,7 +37,12 @@ import {
   Dock,
   Sparkles,
   Blocks,
-} from "lucide-react";
+  Calendar,
+  Cloud,
+  ListTodo,
+  TrendingUp,
+  Trophy,
+} from "lucide-react"
 
 interface NavItem {
   title: string;
@@ -147,6 +152,12 @@ const navigation: NavSection[] = [
 
       // { title: "Spotlight", href: "/docs/components/spotlight", icon: <Sparkles className="size-4" />, isNew: true },
     ],
+  },
+  {
+    title: "Widgets",
+    items: [
+  { title: "Calendar", href: "/docs/components/widgets/calendar", icon: <Calendar className="h-4 w-4" />, isNew: true },
+    ]
   },
   {
     title: "Registry",
