@@ -3,7 +3,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 import { ChevronLeft, ChevronRight, Plus, Clock } from "lucide-react"
-import { GlassWidgetBase } from "./glass-widget-base"
+import { GlassWidgetBase } from "./base-widget"
 
 interface CalendarWidgetProps {
   date?: Date
