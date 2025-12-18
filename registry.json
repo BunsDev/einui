@@ -267,6 +267,40 @@
       ]
     },
     {
+      "name": "base-widget",
+      "type": "registry:ui",
+      "title": "Base Widget",
+      "description": "base widgets component",
+      "dependencies": [
+        "framer-motion"
+      ],
+      "files": [
+        {
+          "path": "registry/widgets/glass-widget-base.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+
+    {
+      "name": "calender-widget",
+      "type": "registry:component",
+      "title": "Calendar Widgets",
+      "description": "Calendar widgets for displaying dates, events, and scheduling information.",
+      "registryDependencies": [
+        "https://ui.eindev.ir/r/base-widget.json"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/widgets/calendar-widget.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "admin-panel",
       "type": "registry:block",
       "title": "Admin Panel",

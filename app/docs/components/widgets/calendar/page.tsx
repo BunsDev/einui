@@ -1,13 +1,18 @@
-import type { Metadata } from "next"
-import { PageHeader } from "@/components/docs/page-header"
-import { ComponentPreview } from "@/components/docs/component-preview"
-import { CLIInstall } from "@/components/docs/cli-install"
-import { CalendarWidget, CompactCalendarWidget, EventsCalendarWidget } from "@/registry/widgets"
+import type { Metadata } from "next";
+import { PageHeader } from "@/components/docs/page-header";
+import { ComponentPreview } from "@/components/docs/component-preview";
+import { CLIInstall } from "@/components/docs/cli-install";
+import {
+  CalendarWidget,
+  CompactCalendarWidget,
+  EventsCalendarWidget,
+} from "@/registry/widgets/calendar-widget";
 
 export const metadata: Metadata = {
   title: "Calendar Widgets",
-  description: "Calendar widgets for displaying dates, events, and scheduling information with liquid glass styling.",
-}
+  description:
+    "Calendar widgets for displaying dates, events, and scheduling information with liquid glass styling.",
+};
 
 const calendarCode = `<CalendarWidget />
 
@@ -15,12 +20,12 @@ const calendarCode = `<CalendarWidget />
 <CalendarWidget date={new Date(2025, 11, 18)} />
 
 // With date selection handler
-<CalendarWidget onDateSelect={(date) => console.log(date)} />`
+<CalendarWidget onDateSelect={(date) => console.log(date)} />`;
 
 const compactCode = `<CompactCalendarWidget />
 
 // With specific date
-<CompactCalendarWidget date={new Date(2025, 11, 18)} />`
+<CompactCalendarWidget date={new Date(2025, 11, 18)} />`;
 
 const eventsCode = `<EventsCalendarWidget
   events={[
@@ -28,7 +33,7 @@ const eventsCode = `<EventsCalendarWidget
     { id: "2", title: "Design Review", time: "2:00 PM", color: "bg-purple-500" },
     { id: "3", title: "Client Call", time: "4:30 PM", color: "bg-amber-500" },
   ]}
-/>`
+/>`;
 
 export default function CalendarWidgetsPage() {
   return (
@@ -38,7 +43,7 @@ export default function CalendarWidgetsPage() {
         description="Calendar widgets for displaying dates, events, and scheduling information."
       />
 
-      <CLIInstall componentName="widgets/calendar-widget" />
+      <CLIInstall componentName="calendar-widget" />
 
       <ComponentPreview
         title="Calendar Widget"
@@ -82,5 +87,5 @@ export default function CalendarWidgetsPage() {
         code={eventsCode}
       />
     </div>
-  )
+  );
 }

@@ -1,50 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { motion, HTMLMotionProps } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { ChevronLeft, ChevronRight, Plus, Clock } from "lucide-react"
+import { GlassWidgetBase } from "./glass-widget-base"
 
-// Base Widget Container
-interface GlassWidgetProps extends Omit<HTMLMotionProps<"div">, "ref"> {
-  children: React.ReactNode
-  size?: "sm" | "md" | "lg" | "xl"
-}
-
-const sizeClasses = {
-  sm: "p-3",
-  md: "p-4",
-  lg: "p-5",
-  xl: "p-6",
-}
-
-const GlassWidgetBase = React.forwardRef<HTMLDivElement, GlassWidgetProps>(
-  ({ className, children, size = "md", ...props }, ref) => {
-    return (
-      <motion.div
-        ref={ref}
-        className={cn(
-          "relative rounded-2xl border border-white/10",
-          "bg-zinc-900/80 backdrop-blur-xl",
-          "shadow-[0_8px_32px_rgba(0,0,0,0.4)]",
-          "before:absolute before:inset-0 before:rounded-2xl",
-          "before:bg-linear-to-b before:from-white/5 before:to-transparent before:pointer-events-none",
-          sizeClasses[size],
-          className,
-        )}
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ type: "spring", duration: 0.4, bounce: 0.2 }}
-        {...props}
-      >
-        <div className="relative z-10">{children}</div>
-      </motion.div>
-    )
-  },
-)
-GlassWidgetBase.displayName = "GlassWidgetBase"
-
-// Calendar Widget
 interface CalendarWidgetProps {
   date?: Date
   selectedDate?: Date
@@ -95,11 +55,11 @@ function CalendarWidget({ date = new Date(), selectedDate, onDateSelect, classNa
   }
 
   return (
-    <GlassWidgetBase className={cn("min-w-60", className)} size="sm">
+    <GlassWidgetBase className={cn("min-w-60", className)} size="sm" glowColor="purple">
       <div className="flex items-center justify-between mb-3">
         <button
           onClick={prevMonth}
-          className="p-1.5 rounded-lg hover:bg-white/10 text-white/60 transition-colors"
+          className="p-1.5 rounded-lg hover:bg-white/10 text-white/60 hover:text-white transition-colors"
           aria-label="Previous month"
         >
           <ChevronLeft className="w-4 h-4" />
@@ -109,7 +69,7 @@ function CalendarWidget({ date = new Date(), selectedDate, onDateSelect, classNa
         </span>
         <button
           onClick={nextMonth}
-          className="p-1.5 rounded-lg hover:bg-white/10 text-white/60 transition-colors"
+          className="p-1.5 rounded-lg hover:bg-white/10 text-white/60 hover:text-white transition-colors"
           aria-label="Next month"
         >
           <ChevronRight className="w-4 h-4" />
@@ -134,9 +94,9 @@ function CalendarWidget({ date = new Date(), selectedDate, onDateSelect, classNa
             className={cn(
               "text-xs py-1.5 rounded-full transition-all",
               day === null && "invisible",
-              day !== null && "text-white/70 hover:bg-white/10 cursor-pointer",
-              day !== null && isSelected(day) && "bg-white/20 text-white font-medium",
-              day !== null && isToday(day) && !isSelected(day) && "ring-1 ring-white/30",
+              day !== null && "text-white/70 hover:bg-white/15 cursor-pointer",
+              day !== null && isSelected(day) && "bg-white/25 text-white font-medium shadow-sm",
+              day !== null && isToday(day) && !isSelected(day) && "ring-1 ring-cyan-400/50",
             )}
           >
             {day}
@@ -147,7 +107,6 @@ function CalendarWidget({ date = new Date(), selectedDate, onDateSelect, classNa
   )
 }
 
-// Compact Calendar Widget
 interface CompactCalendarWidgetProps {
   date?: Date
   className?: string
@@ -159,17 +118,19 @@ function CompactCalendarWidget({ date = new Date(), className }: CompactCalendar
   const dayNumber = date.getDate()
 
   return (
-    <GlassWidgetBase className={cn("flex flex-col items-center justify-center min-w-30", className)}>
+    <GlassWidgetBase
+      className={cn("flex flex-col items-center justify-center min-w-30", className)}
+      glowColor="purple"
+    >
       <div className="flex items-center gap-1.5 text-base">
         <span className="text-white/60">{dayName}</span>
-        <span className="text-red-500 font-medium">{monthName}</span>
+        <span className="text-cyan-400 font-medium">{monthName}</span>
       </div>
       <div className="text-6xl font-light text-white tracking-tight">{dayNumber}</div>
     </GlassWidgetBase>
   )
 }
 
-// Events Calendar Widget
 interface Event {
   id: string
   title: string
@@ -189,7 +150,7 @@ function EventsCalendarWidget({ date = new Date(), events = [], className }: Eve
   const dayNumber = date.getDate()
 
   return (
-    <GlassWidgetBase className={cn("min-w-65", className)} size="lg">
+    <GlassWidgetBase className={cn("min-w-65", className)} size="lg" glowColor="purple">
       <div className="flex items-start justify-between mb-4">
         <div>
           <div className="text-white/60 text-sm">{dayName}</div>
@@ -197,7 +158,7 @@ function EventsCalendarWidget({ date = new Date(), events = [], className }: Eve
             {monthName} {dayNumber}
           </div>
         </div>
-        <button className="p-2 rounded-lg hover:bg-white/10 text-white/60 transition-colors">
+        <button className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white/60 hover:text-white transition-colors">
           <Plus className="w-4 h-4" />
         </button>
       </div>
@@ -207,7 +168,7 @@ function EventsCalendarWidget({ date = new Date(), events = [], className }: Eve
           {events.map((event) => (
             <div
               key={event.id}
-              className="flex items-center gap-3 p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
+              className="flex items-center gap-3 p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5"
             >
               <div className={cn("w-1 h-8 rounded-full", event.color || "bg-cyan-500")} />
               <div className="flex-1 min-w-0">
@@ -227,4 +188,4 @@ function EventsCalendarWidget({ date = new Date(), events = [], className }: Eve
   )
 }
 
-export { CalendarWidget, CompactCalendarWidget, EventsCalendarWidget, GlassWidgetBase }
+export { CalendarWidget, CompactCalendarWidget, EventsCalendarWidget }

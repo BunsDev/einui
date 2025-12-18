@@ -156,12 +156,7 @@ const navigation: NavSection[] = [
   {
     title: "Widgets",
     items: [
-   { title: "Calendar", href: "/docs/components/widgets/calendar", icon: <Calendar className="h-4 w-4" /> },
-  { title: "Clock", href: "/docs/components/widgets/clock", icon: <Clock className="h-4 w-4" /> },
-  { title: "Productivity", href: "/docs/components/widgets/productivity", icon: <ListTodo className="h-4 w-4" /> },
-  { title: "Sports", href: "/docs/components/widgets/sports", icon: <Trophy className="h-4 w-4" /> },
-  { title: "Stocks", href: "/docs/components/widgets/stocks", icon: <TrendingUp className="h-4 w-4" /> },
-  { title: "Weather", href: "/docs/components/widgets/weather", icon: <Cloud className="h-4 w-4" /> },
+  { title: "Calendar", href: "/docs/components/widgets/calendar", icon: <Calendar className="h-4 w-4" />, isNew: true },
     ]
   },
   {
