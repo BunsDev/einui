@@ -10,9 +10,10 @@ import {
   GlassCommandTrigger,
   GlassCommandPalette,
 } from "@/registry/innovative/glass-command-palette";
-import { GlassButton } from "@/registry/liquid-glass";
+import { GlassButton } from "@/registry/liquid-glass/glass-button";
 
-const basicCode = `import { GlassCommandPalette, GlassCommandTrigger } from "@/components/liquid-glass"
+const basicCode = `import { GlassCommandPalette, GlassCommandTrigger } from "@/components/glass-command-palette";
+import { useState } from "react";
 
 export function Demo() {
   const [open, setOpen] = useState(false)

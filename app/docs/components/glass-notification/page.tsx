@@ -3,10 +3,10 @@
 import { PageHeader } from "@/components/docs/page-header"
 import { ComponentPreview } from "@/components/docs/component-preview"
 import { CLIInstall } from "@/components/docs/cli-install"
-import { GlassButton } from "@/registry/liquid-glass"
+import { GlassButton } from "@/registry/liquid-glass/glass-button"
 import { GlassNotification } from "@/registry/innovative/glass-notification"
 
-const basicCode = `import { GlassNotification } from "@/components/liquid-glass"
+const basicCode = `import { GlassNotification } from "@/components/glass-notification"
 
 <GlassNotification
   type="success"
@@ -14,7 +14,7 @@ const basicCode = `import { GlassNotification } from "@/components/liquid-glass"
   description="Your profile has been updated."
 />`
 
-const providerCode = `import { GlassNotificationProvider, useNotification } from "@/components/liquid-glass"
+const providerCode = `import { GlassNotificationProvider, useNotification } from "@/components/glass-notification"
 
 // Wrap your app
 <GlassNotificationProvider>

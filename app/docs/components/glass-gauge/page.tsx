@@ -6,7 +6,7 @@ import { CLIInstall } from "@/components/docs/cli-install"
 import { GlassGauge } from "@/registry/innovative/glass-gauge"
 
 
-const basicCode = `import { GlassGauge } from "@/components/liquid-glass"
+const basicCode = `import { GlassGauge } from "@/components/glass-gauge"
 
 <GlassGauge value={75} label="Progress" />`
 

@@ -14,7 +14,7 @@ const dockItems: DockItem[] = [
   { id: "settings", icon: <Settings className="w-6 h-6" />, label: "Settings" },
 ]
 
-const basicCode = `import { GlassDock } from "@/components/liquid-glass"
+const basicCode = `import { GlassDock } from "@/components/glass-dock"
 
 const items = [
   { id: "home", icon: <Home />, label: "Home", active: true },

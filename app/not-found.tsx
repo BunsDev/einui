@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Blocks, Home, Search } from "lucide-react";
-import { GlassCard, GlassCardContent, GlassButton } from "@/registry/liquid-glass";
+import { GlassCard, GlassCardContent } from "@/registry/liquid-glass/glass-card";
+import { GlassButton } from "@/registry/liquid-glass/glass-button";
 
 export const metadata: Metadata = {
   title: "Page Not Found",

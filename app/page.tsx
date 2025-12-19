@@ -38,23 +38,12 @@ import {
 } from "lucide-react";
 import { GlassGauge } from "@/registry/innovative/glass-gauge";
 import { GlassMorphCard } from "@/registry/innovative/glass-morph-card";
-import {
-  GlassBadge,
-  GlassButton,
-  GlassTabs,
-  GlassTabsList,
-  GlassTabsTrigger,
-  GlassTabsContent,
-  GlassCard,
-  GlassCardHeader,
-  GlassCardTitle,
-  GlassCardDescription,
-  GlassCardContent,
-  GlassProgress,
-  GlassAvatar,
-  GlassAvatarFallback,
-} from "@/registry/liquid-glass";
 import { GlassAnnouncement } from "@/components/glass-announcement";
+import { GlassBadge } from "@/registry/liquid-glass/glass-badge";
+import { GlassButton } from "@/registry/liquid-glass/glass-button";
+import { GlassCard, GlassCardHeader, GlassCardTitle, GlassCardDescription, GlassCardContent } from "@/registry/liquid-glass/glass-card";
+import { GlassProgress } from "@/registry/liquid-glass/glass-progress";
+import { GlassTabs, GlassTabsList, GlassTabsTrigger, GlassTabsContent } from "@/registry/liquid-glass/glass-tabs";
 
 const components = [
   {

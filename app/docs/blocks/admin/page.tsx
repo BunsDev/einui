@@ -42,6 +42,7 @@ import {
   Database,
   Folder,
 } from "lucide-react"
+import { OpenInV0Button } from "@/components/open-in-v0-button"
 
 const stats = [
   { title: "Total Users", value: "12,456", change: "+12.5%", trend: "up", icon: Users },
@@ -70,7 +71,7 @@ export default function AdminBlockPage() {
       />
 
       <CLIInstall componentName="admin-panel" />
-
+      <OpenInV0Button component="admin-panel" />
       {/* admin panel */}
       <div className="my-8 border-2 border-white/10 p-5 rounded-2xl bg-linear-to-br from-slate-900 via-blue-950 to-slate-900 shadow-2xl">
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />

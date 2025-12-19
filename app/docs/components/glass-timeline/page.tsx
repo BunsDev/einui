@@ -13,7 +13,7 @@ const timelineItems: TimelineItem[] = [
   { id: "4", title: "Delivered", description: "Estimated arrival", date: "Jan 5", status: "upcoming" },
 ]
 
-const basicCode = `import { GlassTimeline } from "@/components/liquid-glass"
+const basicCode = `import { GlassTimeline } from "@/components/glass-timeline"
 
 const items = [
   { id: "1", title: "Step 1", status: "completed" },

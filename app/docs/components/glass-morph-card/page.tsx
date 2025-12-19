@@ -7,7 +7,7 @@ import { CLIInstall } from "@/components/docs/cli-install"
 import { Sparkles, Zap, Shield } from "lucide-react"
 import { GlassMorphCard } from "@/registry/innovative/glass-morph-card"
 
-const basicCode = `import { GlassMorphCard } from "@/components/liquid-glass"
+const basicCode = `import { GlassMorphCard } from "@/components/glass-morph-card"
 
 <GlassMorphCard>
   <div className="p-6">

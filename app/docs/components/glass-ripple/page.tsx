@@ -5,13 +5,13 @@ import { ComponentPreview } from "@/components/docs/component-preview"
 import { CLIInstall } from "@/components/docs/cli-install"
 import { GlassRipple, GlassRippleButton } from "@/registry/innovative/glass-ripple"
 
-const basicCode = `import { GlassRippleButton } from "@/components/liquid-glass"
+const basicCode = `import { GlassRippleButton } from "@/components/glass-ripple"
 
 <GlassRippleButton variant="primary">
   Click Me
 </GlassRippleButton>`
 
-const wrapperCode = `import { GlassRipple } from "@/components/liquid-glass"
+const wrapperCode = `import { GlassRipple } from "@/components/glass-ripple"
 
 <GlassRipple color="cyan" className="rounded-xl">
   <div className="p-6 bg-white/10">

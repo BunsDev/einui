@@ -5,7 +5,8 @@ import { PageHeader } from "@/components/docs/page-header"
 import { ComponentPreview } from "@/components/docs/component-preview"
 import { CLIInstall } from "@/components/docs/cli-install"
 import { SpotlightStep, GlassSpotlight } from "@/registry/innovative/glass-spotlight"
-import { GlassButton, GlassCard, GlassCardContent } from "@/registry/liquid-glass"
+import { GlassCard, GlassCardContent } from "@/registry/liquid-glass/glass-card"
+import { GlassButton } from "@/registry/liquid-glass/glass-button"
 
 const spotlightSteps: SpotlightStep[] = [
   {
@@ -28,7 +29,7 @@ const spotlightSteps: SpotlightStep[] = [
   },
 ]
 
-const basicCode = `import { GlassSpotlight } from "@/components/liquid-glass"
+const basicCode = `import { GlassSpotlight } from "@/components/glass-spotlight"
 
 const steps = [
   {
