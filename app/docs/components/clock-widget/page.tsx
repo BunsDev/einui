@@ -54,7 +54,7 @@ export default function ClockWidgetsPage() {
         description="Time-related widgets including analog clocks, digital displays, world clocks, and timers."
       />
 
-      <CLIInstall componentName="widgets/clock-widget" />
+      <CLIInstall componentName="clock-widget" />
 
       <ComponentPreview
         title="Analog Clock"
