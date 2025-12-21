@@ -134,11 +134,11 @@ export default function WeatherWidgetsPage() {
                 icon: "sun",
               }}
               forecast={[
-                { day: "Mon", high: 24, low: 18, icon: "sun", condition: "Sunny" },
-                { day: "Tue", high: 23, low: 17, icon: "cloud", condition: "Cloudy" },
-                { day: "Wed", high: 21, low: 15, icon: "rain", condition: "Rainy" },
-                { day: "Thu", high: 20, low: 14, icon: "rain", condition: "Showers" },
-                { day: "Fri", high: 22, low: 16, icon: "sun", condition: "Clear" },
+                { day: "Mon", high: 24, low: 18, icon: "sun", condition: "sunny" },
+                { day: "Tue", high: 23, low: 17, icon: "cloud", condition: "cloudy" },
+                { day: "Wed", high: 21, low: 15, icon: "rain", condition: "rainy" },
+                { day: "Thu", high: 20, low: 14, icon: "rain", condition: "snowy" },
+                { day: "Fri", high: 22, low: 16, icon: "sun", condition: "night" },
               ]}
               location="Los Angeles, CA"
             />
