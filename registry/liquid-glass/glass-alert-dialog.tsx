@@ -28,16 +28,6 @@ const GlassAlertDialogOverlay = React.forwardRef<
 ))
 GlassAlertDialogOverlay.displayName = AlertDialogPrimitive.Overlay.displayName
 
-const dialogVariants = {
-  hidden: { opacity: 0, scale: 0.95, y: -20 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    transition: { type: "spring", visualDuration: 0.4, bounce: 0.25 },
-  },
-  exit: { opacity: 0, scale: 0.95, y: -10, transition: { duration: 0.2 } },
-}
 
 const GlassAlertDialogContent = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Content>,
