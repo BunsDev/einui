@@ -140,7 +140,8 @@
       "title": "Glass Tabs",
       "description": "Tabbed interface components with smooth transitions and glass morphism styling.",
       "dependencies": [
-        "@radix-ui/react-tabs"
+        "@radix-ui/react-tabs",
+        "framer-motion"
       ],
       "files": [
         {

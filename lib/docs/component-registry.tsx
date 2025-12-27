@@ -1,4 +1,3 @@
-
 import type { ReactNode } from "react";
 
 import {
@@ -103,9 +102,37 @@ import {
   GlassTooltipTrigger,
   GlassTooltipContent,
 } from "@/registry/liquid-glass";
-import { AnalogClockWidget, CalendarWidget, CompactCalendarWidget, CompactStockWidget, CryptoWidget, CurrentWeatherWidget, DetailedWeatherWidget, DigitalClockWidget, EventsCalendarWidget, ForecastWidget, HourlyWeatherWidget, MarketOverviewWidget, PortfolioWidget, StockTickerWidget, StopwatchWidget, TimerWidget, WeatherWidget, WorldClockWidget } from "@/registry/widgets";
+import {
+  AnalogClockWidget,
+  CalendarWidget,
+  CompactCalendarWidget,
+  CompactStockWidget,
+  CryptoWidget,
+  CurrentWeatherWidget,
+  DetailedWeatherWidget,
+  DigitalClockWidget,
+  EventsCalendarWidget,
+  ForecastWeatherWidget,
+  ForecastWidget,
+  HourlyWeatherWidget,
+  MarketOverviewWidget,
+  PortfolioWidget,
+  StockTickerWidget,
+  StopwatchWidget,
+  TimerWidget,
+  WeatherWidget,
+  WorldClockWidget,
+} from "@/registry/widgets";
 import { StatsGrid } from "@/registry/widgets/stats-widget";
-import { GlassMorphCard, GlassDock, GlassGauge, GlassNotification, GlassRipple, GlassRippleButton, GlassTimeline } from "@/registry/innovative";
+import {
+  GlassMorphCard,
+  GlassDock,
+  GlassGauge,
+  GlassNotification,
+  GlassRipple,
+  GlassRippleButton,
+  GlassTimeline,
+} from "@/registry/innovative";
 import { artists, mockUsers } from "@/contants/mock-data";
 
 // Types for the registry
@@ -121,7 +148,15 @@ export interface ComponentConfig {
   title: string;
   description: string;
   registryName: string;
-  category: "components" | "forms" | "data-display" | "overlays" | "innovative" | "time" | "widgets" | "data";
+  category:
+    | "components"
+    | "forms"
+    | "data-display"
+    | "overlays"
+    | "innovative"
+    | "time"
+    | "widgets"
+    | "data";
   examples: ComponentExample[];
 }
 
@@ -273,8 +308,7 @@ const cardExamples: ComponentExample[] = [
             <Star className="w-4 h-4 text-yellow-300" /> Featured Product
           </h3>
           <p className="text-white/60 text-sm mt-2">
-            A short description of the featured product or service that is concise and to the
-            point.
+            A short description of the featured product or service that is concise and to the point.
           </p>
         </GlassCardContent>
         <GlassCardFooter>
@@ -387,7 +421,7 @@ const selectExamples: ComponentExample[] = [
     description: "A simple dropdown select with options.",
     preview: (
       <GlassSelect>
-        <GlassSelectTrigger className="w-[200px]">
+        <GlassSelectTrigger className="w-50">
           <GlassSelectValue placeholder="Select a fruit" />
         </GlassSelectTrigger>
         <GlassSelectContent>
@@ -399,7 +433,7 @@ const selectExamples: ComponentExample[] = [
       </GlassSelect>
     ),
     code: `<GlassSelect>
-  <GlassSelectTrigger className="w-[200px]">
+  <GlassSelectTrigger className="w-50">
     <GlassSelectValue placeholder="Select a fruit" />
   </GlassSelectTrigger>
   <GlassSelectContent>
@@ -414,7 +448,7 @@ const selectExamples: ComponentExample[] = [
     description: "Select with grouped options and labels.",
     preview: (
       <GlassSelect>
-        <GlassSelectTrigger className="w-[240px]">
+        <GlassSelectTrigger className="w-60">
           <GlassSelectValue placeholder="Select a timezone" />
         </GlassSelectTrigger>
         <GlassSelectContent>
@@ -434,7 +468,7 @@ const selectExamples: ComponentExample[] = [
       </GlassSelect>
     ),
     code: `<GlassSelect>
-  <GlassSelectTrigger className="w-[240px]">
+  <GlassSelectTrigger className="w-60">
     <GlassSelectValue placeholder="Select a timezone" />
   </GlassSelectTrigger>
   <GlassSelectContent>
@@ -592,7 +626,7 @@ const radioExamples: ComponentExample[] = [
   </div>
   ...
 </GlassRadioGroup>`,
-  }
+  },
 ];
 
 // ========== SKELETON EXAMPLES ==========
@@ -615,22 +649,24 @@ const skeletonExamples: ComponentExample[] = [
     title: "Card Skeleton",
     description: "Skeleton layout for loading cards.",
     preview: (
-      <GlassCard className="w-full max-w-sm">
-        <GlassCardHeader className="space-y-2">
-          <GlassSkeleton className="h-5 w-1/2" />
-          <GlassSkeleton className="h-4 w-3/4" />
-        </GlassCardHeader>
-        <GlassCardContent className="space-y-2">
-          <GlassSkeleton className="h-4 w-full" />
-          <GlassSkeleton className="h-4 w-full" />
-          <GlassSkeleton className="h-4 w-2/3" />
-        </GlassCardContent>
-        <GlassCardFooter>
-          <GlassSkeleton className="h-10 w-24" />
-        </GlassCardFooter>
-      </GlassCard>
+      <div className="w-full max-w-md">
+        <GlassCard className="w-full">
+          <GlassCardHeader className="space-y-2">
+            <GlassSkeleton className="h-5 w-1/2" />
+            <GlassSkeleton className="h-4 w-3/4" />
+          </GlassCardHeader>
+          <GlassCardContent className="space-y-2">
+            <GlassSkeleton className="h-4 w-full" />
+            <GlassSkeleton className="h-4 w-full" />
+            <GlassSkeleton className="h-4 w-2/3" />
+          </GlassCardContent>
+          <GlassCardFooter>
+            <GlassSkeleton className="h-10 w-24" />
+          </GlassCardFooter>
+        </GlassCard>
+      </div>
     ),
-    code: `<GlassCard className="w-full max-w-sm">
+    code: `<GlassCard className="w-full max-w-md">
   <GlassCardHeader className="space-y-2">
     <GlassSkeleton className="h-5 w-1/2" />
     <GlassSkeleton className="h-4 w-3/4" />
@@ -640,6 +676,36 @@ const skeletonExamples: ComponentExample[] = [
     <GlassSkeleton className="h-4 w-full" />
   </GlassCardContent>
 </GlassCard>`,
+  },
+  {
+    title: "Variant",
+    description: "Skeleton with 'pulse' animation variant.",
+    preview: (
+      <div className="w-full max-w-md flex flex-col gap-4">
+        <div className="flex items-center gap-4">
+          <span className="text-white/60 text-sm w-20">Default</span>
+          <GlassSkeleton variant="default" className="h-12 flex-1" />
+        </div>
+        <div className="flex items-center gap-4">
+          <span className="text-white/60 text-sm w-20">Circular</span>
+          <GlassSkeleton variant="circular" className="h-12 w-12" />
+        </div>
+        <div className="flex items-center gap-4">
+          <span className="text-white/60 text-sm w-20">Text</span>
+          <GlassSkeleton variant="text" className="flex-1" />
+        </div>
+        <div className="flex items-center gap-4">
+          <span className="text-white/60 text-sm w-20">Card</span>
+          <GlassSkeleton variant="card" className="flex-1 h-32" />
+        </div>
+      </div>
+    ),
+    code: `<div className="flex flex-col gap-4">
+  <GlassSkeleton variant="default" className="h-12 w-full" />
+  <GlassSkeleton variant="circular" className="h-12 w-12" />
+  <GlassSkeleton variant="text" />
+  <GlassSkeleton variant="card" className="w-full" />
+</div>`,
   },
 ];
 
@@ -652,7 +718,7 @@ const tableExamples: ComponentExample[] = [
       <GlassTable>
         <GlassTableHeader>
           <GlassTableRow>
-            <GlassTableHead className="w-[100px]">Invoice</GlassTableHead>
+            <GlassTableHead className="w-25">Invoice</GlassTableHead>
             <GlassTableHead>Status</GlassTableHead>
             <GlassTableHead>Method</GlassTableHead>
             <GlassTableHead className="text-right">Amount</GlassTableHead>
@@ -758,7 +824,9 @@ const tableExamples: ComponentExample[] = [
                 <GlassBadge variant="outline">{user.role}</GlassBadge>
               </GlassTableCell>
               <GlassTableCell>
-                <GlassBadge variant={user.status === "Active" ? "primary" : "default"}>{user.status}</GlassBadge>
+                <GlassBadge variant={user.status === "Active" ? "primary" : "default"}>
+                  {user.status}
+                </GlassBadge>
               </GlassTableCell>
             </GlassTableRow>
           ))}
@@ -766,7 +834,7 @@ const tableExamples: ComponentExample[] = [
       </GlassTable>
     ),
     code: ``,
-  }
+  },
 ];
 
 // ========== SHEET EXAMPLES ==========
@@ -1200,7 +1268,7 @@ const scrollAreaExamples: ComponentExample[] = [
           {Array.from({ length: 10 }).map((_, i) => (
             <div
               key={i}
-              className="flex-shrink-0 w-32 h-32 rounded-lg bg-white/5 flex items-center justify-center text-white/70"
+              className="shrink-0 w-32 h-32 rounded-lg bg-white/5 flex items-center justify-center text-white/70"
             >
               Item {i + 1}
             </div>
@@ -1212,7 +1280,7 @@ const scrollAreaExamples: ComponentExample[] = [
     code: `<GlassScrollArea className="w-96 whitespace-nowrap rounded-xl">
   <div className="flex gap-4 p-4">
     {items.map((item) => (
-      <div key={item} className="flex-shrink-0 w-32 h-32">
+      <div key={item} className="shrink-0 w-32 h-32">
         {item}
       </div>
     ))}
@@ -1229,7 +1297,7 @@ const scrollAreaExamples: ComponentExample[] = [
           {artists.map((artist, index) => (
             <div key={artist.handle}>
               <div className="flex items-center gap-3 py-3">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-cyan-500/40 to-blue-500/40 shrink-0" />
+                <div className="h-10 w-10 rounded-full bg-linear-to-br from-cyan-500/40 to-blue-500/40 shrink-0" />
                 <div>
                   <p className="text-sm font-medium text-white">{artist.name}</p>
                   <p className="text-xs text-white/60">{artist.handle}</p>
@@ -1246,7 +1314,7 @@ const scrollAreaExamples: ComponentExample[] = [
     {artists.map((artist, index) => (
       <div key={artist.handle}>
         <div className="flex items-center gap-3 py-3">
-          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-cyan-500/40 to-blue-500/40 shrink-0" />
+          <div className="h-10 w-10 rounded-full bg-linear-to-br from-cyan-500/40 to-blue-500/40 shrink-0" />
           <div>
             <p className="text-sm font-medium text-white">{artist.name}</p>
             <p className="text-xs text-white/60">{artist.handle}</p>
@@ -1257,7 +1325,7 @@ const scrollAreaExamples: ComponentExample[] = [
     ))}
   </div>
 </GlassScrollArea>`,
-  }
+  },
 ];
 
 // ========== DIALOGS EXAMPLES ==========
@@ -1514,7 +1582,7 @@ const tabsExamples: ComponentExample[] = [
     <GlassButton variant="outline">Settings</GlassButton>
   </GlassSheetTrigger>
 </GlassSheet>`,
-  }
+  },
 ];
 
 // ========== BADGE EXAMPLES ==========
@@ -1573,7 +1641,7 @@ const badgeExamples: ComponentExample[] = [
     code: `<GlassBadge>
   <Star className="w-4 h-4 text-yellow-300" /> Featured
 </GlassBadge>`,
-  }
+  },
 ];
 
 // ========== AVATAR EXAMPLES ==========
@@ -1760,7 +1828,7 @@ const switchExamples: ComponentExample[] = [
       <p className="text-white/50 text-sm">Receive push notifications</p>
     </div>
     </div>`,
-  }
+  },
 ];
 
 // ========== SLIDER EXAMPLES ==========
@@ -1913,6 +1981,38 @@ const weatherExamples: ComponentExample[] = [
 />`,
   },
   {
+    title: "Forecast Widget",
+    description: "5-day weather forecast with high/low temperatures.",
+    preview: (
+      <ForecastWeatherWidget
+        current={{
+          temperature: 18,
+          condition: "cloudy",
+          icon: "cloud",
+        }}
+        forecast={[
+          { day: "Mon", high: 22, low: 14, condition: "sunny" },
+          { day: "Tue", high: 24, low: 15, condition: "sunny" },
+          { day: "Wed", high: 20, low: 13, condition: "cloudy" },
+          { day: "Thu", high: 18, low: 12, condition: "rainy" },
+          { day: "Fri", high: 21, low: 14, condition: "cloudy" },
+        ]}
+      />
+    ),
+    code: `<ForecastWeatherWidget
+  current={{
+    temperature: 18,
+    condition: "cloudy",
+    icon: "cloud",
+  }}
+  forecast={[
+    { day: "Mon", high: 22, low: 14, condition: "sunny" },
+    { day: "Tue", high: 24, low: 15, condition: "sunny" },
+    { day: "Wed", high: 20, low: 13, condition: "cloudy" },
+  ]}
+/>`,
+  },
+  {
     title: "Large Weather Widget",
     description: "Prominent weather display for dashboards and home screens.",
     preview: (
@@ -1973,6 +2073,7 @@ const weatherExamples: ComponentExample[] = [
   ]}
 />`,
   },
+
   {
     title: "Weather Details Widget",
     description: "Detailed weather metrics including UV, visibility, pressure, and more.",
@@ -1996,7 +2097,6 @@ const weatherExamples: ComponentExample[] = [
 />`,
   },
 ];
-
 
 // ========== CALENDAR EXAMPLES ==========
 const calendarExamples: ComponentExample[] = [
@@ -2279,9 +2379,7 @@ const statsExamples: ComponentExample[] = [
 ];
 
 // ========== INNOVATIVE EXAMPLES ==========
-const innovativeExamples: ComponentExample[] = [
-
-];
+const innovativeExamples: ComponentExample[] = [];
 
 // ========== COMPONENT REGISTRY ==========
 export const componentRegistry: Record<string, ComponentConfig> = {
@@ -2511,7 +2609,7 @@ export const componentRegistry: Record<string, ComponentConfig> = {
     description: "Stats and metrics display widgets.",
     registryName: "stats-widget",
     category: "widgets",
-    examples: statsExamples
+    examples: statsExamples,
   },
   "glass-command-palette": {
     slug: "glass-command-palette",
