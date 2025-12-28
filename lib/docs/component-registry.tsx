@@ -2179,7 +2179,7 @@ const clockExamples: ComponentExample[] = [
     code: `<div className="flex flex-wrap gap-6">
 <AnalogClockWidget showNumbers size="sm" />
 <AnalogClockWidget showNumbers size="md" />
-<AnalogClockWidget showNumbers size="lg" />
+<AnalogClockWidget showNumbers={false} size="lg" />
 </div>`,
   },
   {

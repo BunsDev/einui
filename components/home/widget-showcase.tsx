@@ -25,7 +25,7 @@ export function WidgetShowcase() {
         <CompactCalendarWidget />
       </div>
       <div className="col-span-1">
-        <AnalogClockWidget size="sm" showNumbers={false} />
+        <AnalogClockWidget size="lg" showNumbers={true} />
       </div>
       <div className="col-span-2">
         <HourlyWeatherWidget

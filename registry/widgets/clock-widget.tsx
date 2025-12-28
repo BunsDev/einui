@@ -18,16 +18,19 @@ function AnalogClockWidget({
   size = "md",
   className,
 }: AnalogClockWidgetProps) {
-  const [currentTime, setCurrentTime] = React.useState(time || new Date());
+  const [currentTime, setCurrentTime] = React.useState<Date | undefined>(time);
 
   React.useEffect(() => {
     if (time) {
       setCurrentTime(time);
       return;
     }
+    setCurrentTime(new Date());
     const interval = setInterval(() => setCurrentTime(new Date()), 1000);
     return () => clearInterval(interval);
   }, [time]);
+
+  if (!currentTime) return null;
 
   const seconds = currentTime.getSeconds();
   const minutes = currentTime.getMinutes();
@@ -38,9 +41,9 @@ function AnalogClockWidget({
   const hourDegrees = hours * 30 + minutes * 0.5;
 
   const sizeConfig = {
-    sm: { container: "w-24 h-24", numbers: "text-[10px]", radius: 36 },
-    md: { container: "w-32 h-32", numbers: "text-xs", radius: 42 },
-    lg: { container: "w-40 h-40", numbers: "text-sm", radius: 50 },
+    sm: { container: "size-24", numbers: "text-[10px]", radius: 36 },
+    md: { container: "size-32", numbers: "text-xs", radius: 42 },
+    lg: { container: "size-36", numbers: "text-sm", radius: 42 },
   };
 
   const config = sizeConfig[size];
@@ -50,7 +53,7 @@ function AnalogClockWidget({
     <GlassWidgetBase className={cn("p-3", className)} size="sm" glowColor="blue">
       <div className={cn("relative", config.container)}>
         {/* Clock face with glass effect */}
-        <div className="absolute inset-0 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm shadow-inner" />
+        <div className="absolute inset-0 rounded-full border border-white/20  bg-white/5 backdrop-blur-sm shadow-inner" />
 
         {numbers.map((num, i) => {
           const angle = (i * 30 - 90) * (Math.PI / 180);
@@ -77,10 +80,10 @@ function AnalogClockWidget({
             return (
               <div
                 key={i}
-                className="absolute w-1.5 h-1.5 rounded-full bg-white/40"
+                className="absolute size-1.5 rounded-full bg-white/40"
                 style={{
-                  left: `${50 + 42 * Math.cos(angle)}%`,
-                  top: `${50 + 42 * Math.sin(angle)}%`,
+                  left: `${50 + config.radius * Math.cos(angle)}%`,
+                  top: `${50 + config.radius * Math.sin(angle)}%`,
                   transform: "translate(-50%, -50%)",
                 }}
               />
@@ -134,16 +137,19 @@ function DigitalClockWidget({
   format = "12h",
   className,
 }: DigitalClockWidgetProps) {
-  const [currentTime, setCurrentTime] = React.useState(time || new Date());
+  const [currentTime, setCurrentTime] = React.useState<Date | undefined>(time);
 
   React.useEffect(() => {
     if (time) {
       setCurrentTime(time);
       return;
     }
+    setCurrentTime(new Date());
     const interval = setInterval(() => setCurrentTime(new Date()), 1000);
     return () => clearInterval(interval);
   }, [time]);
+
+  if (!currentTime) return null;
 
   const hours = currentTime.getHours();
   const minutes = currentTime.getMinutes();

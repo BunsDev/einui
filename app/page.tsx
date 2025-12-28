@@ -1,39 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-  Square,
   LayoutGrid,
-  MessageSquare,
-  TextCursorInput,
-  Layers,
-  PanelLeft,
   Sparkles,
   ArrowRight,
-  Package,
   BookOpen,
   Zap,
   Palette,
   Code2,
-  Star,
   Github,
   Twitter,
   Globe,
   Accessibility,
   Moon,
-  Info,
-  User,
-  CheckCircle,
-  ToggleLeft,
-  Sliders,
-  CircleDot,
   Copy,
-  Command,
-  Bell,
-  MousePointer,
-  Droplets,
-  Clock,
-  Gauge,
-  Dock,
   Blocks,
 } from "lucide-react";
 import { GlassAnnouncement } from "@/components/glass-announcement";
@@ -147,10 +127,9 @@ export default function HomePage() {
             </div>
           </div>
           <div className="flex justify-center mt-8">
-          <ScrollIndicator targetId="widgets" />
-        </div>
+            <ScrollIndicator targetId="widgets" />
+          </div>
         </section>
-
 
         {/* Widget Showcase */}
         <section id="widgets" className="container mx-auto px-4 pb-24">
