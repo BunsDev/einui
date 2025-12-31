@@ -17,10 +17,8 @@ import {
   Clock,
   Gauge,
   Dock,
-  Sparkles,
   Calendar,
   TrendingUp,
-  Trophy,
   CloudSun,
 } from "lucide-react";
 import { GlassBadge } from "@/registry/liquid-glass/glass-badge";

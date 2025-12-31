@@ -83,7 +83,7 @@ const GlassDock = React.forwardRef<HTMLDivElement, GlassDockProps>(
 
     const getScale = React.useCallback(
       (index: number) => {
-        if (mousePos === null || !dockRef.current) return 1
+        if (mousePos === null) return 1
 
         const itemSize = baseSize + 16
         const itemCenter = index * itemSize + itemSize / 2

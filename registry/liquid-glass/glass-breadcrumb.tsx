@@ -17,7 +17,7 @@ const GlassBreadcrumbList = React.forwardRef<HTMLOListElement, React.ComponentPr
     <ol
       ref={ref}
       className={cn(
-        "flex flex-wrap items-center gap-1.5 break-words text-sm",
+        "flex flex-wrap items-center gap-1.5 wrap-break-words text-sm",
         "px-4 py-2 rounded-xl",
         "bg-white/5 backdrop-blur-xl border border-white/10",
         className,

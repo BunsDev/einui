@@ -8,7 +8,6 @@ import {
   Download,
   Settings,
   User,
-  CreditCard,
   Trash2,
   LogOut,
   Home,
@@ -120,19 +119,9 @@ import {
   StockTickerWidget,
   StopwatchWidget,
   TimerWidget,
-  WeatherWidget,
   WorldClockWidget,
 } from "@/registry/widgets";
 import { StatsGrid } from "@/registry/widgets/stats-widget";
-import {
-  GlassMorphCard,
-  GlassDock,
-  GlassGauge,
-  GlassNotification,
-  GlassRipple,
-  GlassRippleButton,
-  GlassTimeline,
-} from "@/registry/innovative";
 import { artists, mockUsers } from "@/contants/mock-data";
 
 // Types for the registry

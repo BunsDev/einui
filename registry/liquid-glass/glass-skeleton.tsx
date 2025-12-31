@@ -11,17 +11,6 @@ interface GlassSkeletonProps extends React.HTMLAttributes<HTMLDivElement> {
   lines?: number
 }
 
-const shimmerVariants = {
-  animate: {
-    backgroundPosition: ["200% 0", "-200% 0"],
-    transition: {
-      duration: 2,
-      repeat: Number.POSITIVE_INFINITY,
-      ease: "linear",
-    },
-  },
-}
-
 const GlassSkeleton = React.forwardRef<HTMLDivElement, GlassSkeletonProps>(
   ({ className, variant = "default", width, height, lines = 1, ...props }, ref) => {
     const baseClasses = cn(

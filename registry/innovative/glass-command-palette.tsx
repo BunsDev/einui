@@ -234,7 +234,7 @@ const GlassCommandPalette = React.forwardRef<HTMLDivElement, GlassCommandPalette
             {/* Results - scrollable area */}
             <div className={cn("overflow-y-auto py-2", isVertical ? "flex-1" : "max-h-80")}>
               {filteredGroups.length === 0 ? (
-                <div className="px-4 py-8 text-center text-white/40">No results found for "{search}"</div>
+                <div className="px-4 py-8 text-center text-white/40">No results found for &quot;{search}&quot;</div>
               ) : (
                 filteredGroups.map((group) => (
                   <div key={group.label} className="mb-2" role="group" aria-label={group.label}>

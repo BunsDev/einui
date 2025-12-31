@@ -3,7 +3,6 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { TopHeader } from "@/components/top-header";
-// @ts-ignore
 import "./globals.css";
 
 const _geist = Geist({ subsets: ["latin"] });
@@ -44,9 +43,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: [
-      { url: "/logo.svg", type: "image/svg+xml" },
-    ],
+    icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
     apple: "/logo.png",
   },
   manifest: "/manifest.json",

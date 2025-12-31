@@ -1,14 +1,14 @@
-import Link from "next/link"
+import Link from "next/link";
 import {
   GlassCard,
   GlassCardContent,
   GlassCardDescription,
   GlassCardHeader,
   GlassCardTitle,
-} from "@/registry/liquid-glass/glass-card"
-import { GlassButton } from "@/registry/liquid-glass/glass-button"
-import { CodeBlockWithCopy } from "@/components/docs/code-block-with-copy"
-import { ArrowRight, Sparkles, Code2, Palette, Blocks, Zap } from "lucide-react"
+} from "@/registry/liquid-glass/glass-card";
+import { GlassButton } from "@/registry/liquid-glass/glass-button";
+import { CodeBlockWithCopy } from "@/components/docs/code-block-with-copy";
+import { ArrowRight, Sparkles, Code2, Palette, Blocks, Zap } from "lucide-react";
 
 export default function IntroductionPage() {
   return (
@@ -16,12 +16,15 @@ export default function IntroductionPage() {
       {/* Header */}
       <div className="mb-12">
         <div className="flex items-center gap-2 mb-4">
-          <span className="rounded-full bg-cyan-500/20 px-3 py-1 text-xs font-medium text-cyan-400">Documentation</span>
+          <span className="rounded-full bg-cyan-500/20 px-3 py-1 text-xs font-medium text-cyan-400">
+            Documentation
+          </span>
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Introduction</h1>
         <p className="text-xl text-white/60 leading-relaxed">
-          Ein UI is a collection of beautifully-designed, liquid glass styled components built on top of Shadcn UI.
-          Fully accessible, customizable, and ready to use in your Next.js projects.
+          Ein UI is a collection of beautifully-designed, liquid glass styled components built on
+          top of Shadcn UI. Fully accessible, customizable, and ready to use in your Next.js
+          projects.
         </p>
       </div>
 
@@ -32,7 +35,9 @@ export default function IntroductionPage() {
             <Zap className="h-5 w-5 text-yellow-400" />
             Quick Start
           </GlassCardTitle>
-          <GlassCardDescription>Get up and running in seconds with a single command</GlassCardDescription>
+          <GlassCardDescription>
+            Get up and running in seconds with a single command
+          </GlassCardDescription>
         </GlassCardHeader>
         <GlassCardContent>
           <CodeBlockWithCopy code="npx shadcn@latest add @einui/glass-card" />
@@ -52,7 +57,8 @@ export default function IntroductionPage() {
           </GlassCardHeader>
           <GlassCardContent>
             <p className="text-white/60 text-sm">
-              Beautiful transparency effects, smooth gradients, and sleek glow animations that bring your UI to life.
+              Beautiful transparency effects, smooth gradients, and sleek glow animations that bring
+              your UI to life.
             </p>
           </GlassCardContent>
         </GlassCard>
@@ -66,7 +72,8 @@ export default function IntroductionPage() {
           </GlassCardHeader>
           <GlassCardContent>
             <p className="text-white/60 text-sm">
-              Full access to component source code. Copy, paste, and customize to fit your exact needs.
+              Full access to component source code. Copy, paste, and customize to fit your exact
+              needs.
             </p>
           </GlassCardContent>
         </GlassCard>
@@ -80,7 +87,8 @@ export default function IntroductionPage() {
           </GlassCardHeader>
           <GlassCardContent>
             <p className="text-white/60 text-sm">
-              Built with the latest Tailwind CSS v4 features including CSS variables and the new theming system.
+              Built with the latest Tailwind CSS v4 features including CSS variables and the new
+              theming system.
             </p>
           </GlassCardContent>
         </GlassCard>
@@ -94,7 +102,8 @@ export default function IntroductionPage() {
           </GlassCardHeader>
           <GlassCardContent>
             <p className="text-white/60 text-sm">
-              Works seamlessly with the Shadcn CLI. Install components directly into your project structure.
+              Works seamlessly with the Shadcn CLI. Install components directly into your project
+              structure.
             </p>
           </GlassCardContent>
         </GlassCard>
@@ -107,14 +116,15 @@ export default function IntroductionPage() {
           <GlassCard className="mb-6">
             <GlassCardContent className="py-6">
               <blockquote className="border-l-2 border-cyan-500 pl-4 italic text-white/70">
-                "This is not a component library. It is how you build your component library."
+                &quot;This is not a component library. It is how you build your component
+                library.&quot;
               </blockquote>
             </GlassCardContent>
           </GlassCard>
 
           <p className="text-white/70 mb-4">
-            Ein UI follows the same principles as Shadcn UI - components are not installed as a package dependency.
-            Instead, you get the actual source code copied into your project.
+            Ein UI follows the same principles as Shadcn UI - components are not installed as a
+            package dependency. Instead, you get the actual source code copied into your project.
           </p>
 
           <p className="text-white/70 mb-4">This approach gives you:</p>
@@ -138,5 +148,5 @@ export default function IntroductionPage() {
         </Link>
       </div>
     </div>
-  )
+  );
 }

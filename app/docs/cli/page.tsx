@@ -1,14 +1,14 @@
-import Link from "next/link"
+import Link from "next/link";
 import {
   GlassCard,
   GlassCardContent,
   GlassCardDescription,
   GlassCardHeader,
   GlassCardTitle,
-} from "@/registry/liquid-glass/glass-card"
-import { GlassButton } from "@/registry/liquid-glass/glass-button"
-import { CodeBlockWithCopy } from "@/components/docs/code-block-with-copy"
-import { ArrowRight, ArrowLeft, Terminal, Zap, Package } from "lucide-react"
+} from "@/registry/liquid-glass/glass-card";
+import { GlassButton } from "@/registry/liquid-glass/glass-button";
+import { CodeBlockWithCopy } from "@/components/docs/code-block-with-copy";
+import { ArrowRight, ArrowLeft, Terminal, Zap, Package } from "lucide-react";
 
 const commands = [
   {
@@ -23,7 +23,7 @@ const commands = [
     usage: "npx shadcn@latest diff [component]",
     example: "npx shadcn@latest diff @einui/glass-button",
   },
-]
+];
 
 export default function CLIPage() {
   return (
@@ -31,7 +31,9 @@ export default function CLIPage() {
       {/* Header */}
       <div className="mb-12">
         <div className="flex items-center gap-2 mb-4">
-          <span className="rounded-full bg-green-500/20 px-3 py-1 text-xs font-medium text-green-400">Tools</span>
+          <span className="rounded-full bg-green-500/20 px-3 py-1 text-xs font-medium text-green-400">
+            Tools
+          </span>
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">CLI</h1>
         <p className="text-xl text-white/60 leading-relaxed">
@@ -49,7 +51,9 @@ export default function CLIPage() {
           <GlassCardDescription>Install your first component in seconds</GlassCardDescription>
         </GlassCardHeader>
         <GlassCardContent className="space-y-4">
-          <p className="text-white/70">Ein UI uses the standard Shadcn CLI. If you don't have it set up, run:</p>
+          <p className="text-white/70">
+            Ein UI uses the standard Shadcn CLI. If you don&apos;t have it set up, run:
+          </p>
           <CodeBlockWithCopy code="npx shadcn@latest init" />
 
           <p className="text-white/70">Then add any Ein UI component:</p>
@@ -93,7 +97,9 @@ export default function CLIPage() {
             <Package className="h-5 w-5 text-purple-400" />
             Registry Configuration
           </GlassCardTitle>
-          <GlassCardDescription>Add the Ein registry for easier component installation</GlassCardDescription>
+          <GlassCardDescription>
+            Add the Ein registry for easier component installation
+          </GlassCardDescription>
         </GlassCardHeader>
         <GlassCardContent className="space-y-4">
           <p className="text-white/70">
@@ -147,5 +153,5 @@ export default function CLIPage() {
         </Link>
       </div>
     </div>
-  )
+  );
 }

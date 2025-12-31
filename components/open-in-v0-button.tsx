@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { GlassButton } from "@/registry/liquid-glass/glass-button";
 
 export function OpenInV0Button({ component }: { component: string }) {

@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Github, Star, Menu, X, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -10,7 +9,6 @@ import { headerNavItems } from "@/contants/nav-items";
 
 export function TopHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
 
   return (
     <>

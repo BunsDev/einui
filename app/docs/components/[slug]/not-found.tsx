@@ -1,6 +1,5 @@
-import { GlassButton, GlassCard, GlassCardContent } from "@/registry/liquid-glass"
-import Link from "next/link"
-
+import { GlassButton, GlassCard, GlassCardContent } from "@/registry/liquid-glass";
+import Link from "next/link";
 
 export default function ComponentNotFound() {
   return (
@@ -9,7 +8,9 @@ export default function ComponentNotFound() {
         <GlassCardContent className="pt-8 pb-8 space-y-4">
           <div className="text-6xl mb-4">🔍</div>
           <h1 className="text-2xl font-bold text-white">Component Not Found</h1>
-          <p className="text-white/60">The component you're looking for doesn't exist or may have been moved.</p>
+          <p className="text-white/60">
+            The component you&apos;re looking for doesn&apos;t exist or may have been moved.
+          </p>
           <div className="pt-4">
             <GlassButton asChild variant="primary">
               <Link href="/docs">Back to Documentation</Link>
@@ -18,5 +19,5 @@ export default function ComponentNotFound() {
         </GlassCardContent>
       </GlassCard>
     </div>
-  )
+  );
 }
