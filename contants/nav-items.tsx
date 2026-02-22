@@ -118,6 +118,7 @@ export const headerNavItems = [
   { href: "/docs/components/glass-avatar", label: "Components", icon: LayoutGrid },
   { href: "/docs/components/weather-widget", label: "Widgets", icon: Sparkles, isNew: true },
   { href: "/docs/blocks/signup", label: "Blocks", icon: PanelLeft, isNew: true },
+  { href: "/lit-demo", label: "Lit Demo", icon: Layers, isNew: true },
 ];
 
 export function generateNavigation(): NavSection[] {
